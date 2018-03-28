@@ -1,16 +1,26 @@
 from time import sleep
+import random
 print('\033[1;31m Seja bem vindo ao Cassino! Desenvolvido por JoãoGuilherme.')
 sleep(3)
-ini = str(input('Você deseja adicionar fichas a sua conta? '))
-if ini == 'Sim':
-    print('Aguarde estamos iniciando sua carteira virtual...')
-    sleep(5)
-    valor =float(input('Qual valor será creditado a sua conta: '))
-else:
-    print('\033[1;31m Você deve adicionar um valor em sua conta para continuar!')
-    break
+print('Aguarde estamos iniciando sua carteira virtual...')
+sleep(5)
+valor =float(input('Qual valor será creditado a sua conta: '))
+print('Analisando...')
+sleep(5)
 cartao = int(input('Para adicionar o valor desejado digite o número de seu cartão de crédito (sem espaços e traços): '))
+print('Analizando dados bancários...')
+sleep(5)
 confirma = (input('Você digitou o cartão {}, você confirma os dados? '.format(cartao)))
-carteira = ini
-jogo = str(input('Bem vindo ao cassino, o que deseja jogar? '))
-Jogos
+carteira = valor
+jogo = float(input('Bem vindo ao cassino, deseja apostar quanto?'))
+aposta = valor - jogo
+carteira2 = aposta
+nj = int(input('Vamos começar, digite um número para adivinhar: '))
+nc = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+escolha = random.choice(nc)
+print('A escolha do computador foi {}!'.format(escolha))
+if nj == nc:
+    print('PARABÉNS, você ganhou R$25,00 da aposta contra a maquina!')
+    ncart = carteira2 + aposta
+else:
+    print('Você infelizmente PERDEU R${}! TENTE NOVAMENTE!'.format(aposta))
