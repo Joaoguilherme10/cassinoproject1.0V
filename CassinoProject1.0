@@ -13,3 +13,4 @@ cartao = int(input('Para adicionar o valor desejado digite o número de seu cart
 confirma = (input('Você digitou o cartão {}, você confirma os dados? '.format(cartao)))
 carteira = ini
 jogo = str(input('Bem vindo ao cassino, o que deseja jogar? '))
+Jogos
