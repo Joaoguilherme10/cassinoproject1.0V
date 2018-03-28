@@ -1,0 +1,15 @@
+from time import sleep
+print('\033[1;31m Seja bem vindo ao Cassino! Desenvolvido por JoãoGuilherme.')
+sleep(3)
+ini = str(input('Você deseja adicionar fichas a sua conta? '))
+if ini == 'Sim':
+    print('Aguarde estamos iniciando sua carteira virtual...')
+    sleep(5)
+    valor =float(input('Qual valor será creditado a sua conta: '))
+else:
+    print('\033[1;31m Você deve adicionar um valor em sua conta para continuar!')
+    break
+cartao = int(input('Para adicionar o valor desejado digite o número de seu cartão de crédito (sem espaços e traços): '))
+confirma = (input('Você digitou o cartão {}, você confirma os dados? '.format(cartao)))
+carteira = ini
+jogo = str(input('Bem vindo ao cassino, o que deseja jogar? '))
