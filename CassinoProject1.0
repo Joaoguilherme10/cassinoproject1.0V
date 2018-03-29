@@ -12,15 +12,18 @@ print('Analizando dados bancários...')
 sleep(5)
 confirma = (input('Você digitou o cartão {}, você confirma os dados? '.format(cartao)))
 carteira = valor
-jogo = float(input('Bem vindo ao cassino, deseja apostar quanto?'))
-aposta = valor - jogo
+print('Iniciando o sistema do Cassino, AGUARDE...')
+sleep(5)
+jogo = float(input('Bem vindo ao cassino, deseja apostar quanto? '))
+aposta = jogo
 carteira2 = aposta
 nj = int(input('Vamos começar, digite um número para adivinhar: '))
-nc = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+nc = [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 escolha = random.choice(nc)
 print('A escolha do computador foi {}!'.format(escolha))
-if nj == nc:
-    print('PARABÉNS, você ganhou R$25,00 da aposta contra a maquina!')
-    ncart = carteira2 + aposta
+if escolha == nj:
+    ncart = carteira+aposta
+    print('PARABÉNS, você ganhou a aposta contra a maquina e seu novo saldo é de R${}!'.format(ncart))
 else:
-    print('Você infelizmente PERDEU R${}! TENTE NOVAMENTE!'.format(aposta))
+    ncart1 = carteira-aposta
+    print('Você infelizmente PERDEU e seu novo saldo é de {}! TENTE NOVAMENTE!'.format(ncart1))
